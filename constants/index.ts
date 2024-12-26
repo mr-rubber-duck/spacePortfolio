@@ -1,13 +1,17 @@
-export const Skill_data = [
+
+
+//her i  declare the languge that i know  
+export const languge = [
   {
-    skill_name: "Html 5",
-    Image: "/html.png",
+    skill_name: "cpp",
+    Image: "/cpp.png",
+   
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Css",
-    Image: "/css.png",
+    skill_name: "python",
+    Image: "/python.png",
     width: 80,
     height: 80,
   },
@@ -18,161 +22,98 @@ export const Skill_data = [
     height: 65,
   },
   {
-    skill_name: "Tailwind Css",
-    Image: "/tailwind.png",
+    skill_name: "Assembly",
+    Image: "/asmbly.png",
+    
     width: 80,
     height: 80,
   },
   {
-    skill_name: "React",
-    Image: "/react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    Image: "/redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    Image: "/reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Type Script",
+    skill_name: "TypeScript",
     Image: "/ts.png",
     width: 80,
     height: 80,
   },
+  
+  {
+    skill_name: "Go",
+    Image: "/go.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "Html 5",
+    Image: "/html.png",
+    width: 90,
+    height: 90,
+  },
+  {
+    skill_name: "Css",
+    Image: "/css.png",
+    width: 90,
+    height: 90,
+  },
+  
+
+];
+
+
+//farame work 
+
+export const Frontend_skill = [
+  
   {
     skill_name: "Next js 13",
     Image: "/next.png",
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
   },
   {
     skill_name: "Framer Motion",
     Image: "/framer.png",
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
   },
+
   {
-    skill_name: "Stripe Payment",
-    Image: "/stripe.webp",
-    width: 80,
-    height: 80,
+    skill_name: "React js",
+    Image: "/react.png",
+    width: 70,
+    height: 70,
   },
   {
     skill_name: "Node js",
     Image: "/node-js.png",
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
   },
   {
-    skill_name: "Mongo db",
-    Image: "/mongodb.png",
-    width: 40,
-    height: 40,
-  },
-
-];
-
-export const Socials = [
-  {
-    name: "Discord",
-    src: "/instagram.svg",
-  },
-  {
-    name: "Facebook",
-    src: "/facebook.svg",
-  },
-  {
-    name: "Instagram",
-    src: "/discord.svg",
-  },
-];
-
-
-
-export const Frontend_skill = [
-  {
-    skill_name: "Html 5",
-    Image: "/html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Css",
-    Image: "/css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Java Script",
-    Image: "/js.png",
-    width: 65,
-    height: 65,
+    skill_name: "React Native",
+    Image: "/ReactNative .png",
+    width: 70,
+    height: 70,
   },
   {
     skill_name: "Tailwind Css",
     Image: "/tailwind.png",
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
   },
   {
     skill_name: "Material UI",
     Image: "/mui.png",
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
   },
-  {
-    skill_name: "React",
-    Image: "/react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    Image: "/redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    Image: "/reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Type Script",
-    Image: "/ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next js 13",
-    Image: "/next.png",
-    width: 80,
-    height: 80,
-  },
+     
+  
+  
+  
 ];
 
 export const Backend_skill = [
-  {
-    skill_name: "Node js",
-    Image: "/node-js.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Express js",
-    Image: "/express.png",
-    width: 80,
-    height: 80,
-  },
+   
+    
   {
     skill_name: "Mongo db",
     Image: "/mongodb.png",
@@ -203,27 +144,12 @@ export const Backend_skill = [
     width: 70,
     height: 70,
   },
-  {
-    skill_name: "Graphql",
-    Image: "/graphql.png",
-    width: 80,
-    height: 80,
-  },
+  
 ];
 
 export const Full_stack = [
-  {
-    skill_name: "React Native",
-    Image: "/ReactNative .png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Tauri",
-    Image: "/tauri.svg",
-    width: 70,
-    height: 70,
-  },
+  
+  
   {
     skill_name: "Docker",
     Image: "/docker.webp",
@@ -231,26 +157,58 @@ export const Full_stack = [
     height: 70,
   },
 
-  {
-    skill_name: "Figma",
-    Image: "/figma.png",
-    width: 50,
-    height: 50,
-  },
-
 ];
 
 
 
-export const Other_skill = [
+ export const Other_skill = [
   {
-    skill_name: "Go",
-    Image: "/go.png",
-    width: 60,
-    height: 60,
+    skills_name:"jhontheripper",
+    Image:"/jhon.png",
+    width:70,
+    heigth:70,
   },
+  {
+    skills_name:"nmap",
+    Image:"/nmap.png",
+    width:70,
+    heigth:70,
+  },
+  {
+    skills_name:"ctfchallenge",
+    Image:"ctf.png",
+    width:70,
+    heigth:70,
+  },
+  {
+    skills_name:"hydra ",
+    Image:"hydra.png",
+    width:70,
+    heigth:70,
+  },
+  {
+    skills_name:"burpsuite",
+    Image:"burpsuite.png",
+    width:70,
+    heigth:70,
+  },
+  
 ];
 
-
+//sosoial media acount and links 
+export const Socials = [
+  {
+    name: "Linkedin",
+    src: "https://www.svgrepo.com/show/75820/linkedin.svg",
+  },
+  {
+    name: "Github",
+    src: "https://www.svgrepo.com/show/387672/github.svg",
+  },
+  {
+    name: "Discord",
+    src: "/discord.svg",
+  },
+];
 
 
