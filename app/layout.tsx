@@ -3,6 +3,7 @@ import { Inter, Roboto_Mono } from "next/font/google"; // Correct font names
 import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
+import StarBackground from "@/components/main/StarBackground";
 
 // Define fonts using correct API
 const inter = Inter({
@@ -31,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.variable} bg-[#030014] overflow-x-hidden`}>
-         {/* <StarsCanvas />  */}
+         {/* <StarBackground />  */}
         <Navbar />
         {children}
       </body>
