@@ -1,17 +1,14 @@
-
-
-//her i  declare the languge that i know  
-export const languge = [
+export const Skill_data = [
   {
     skill_name: "cpp",
-    Image: "/cpp.png",
+    Image: "/png/cpp.png",
    
     width: 80,
     height: 80,
   },
   {
     skill_name: "python",
-    Image: "/python.png",
+    Image: "/png/python.png",
     width: 80,
     height: 80,
   },
@@ -23,7 +20,7 @@ export const languge = [
   },
   {
     skill_name: "Assembly",
-    Image: "/asmbly.png",
+    Image: "/png/asmbly.png",
     
     width: 80,
     height: 80,
@@ -38,8 +35,8 @@ export const languge = [
   {
     skill_name: "Go",
     Image: "/go.png",
-    width: 80,
-    height: 80,
+    width: 60,
+    height: 60,
   },
   {
     skill_name: "Html 5",
@@ -144,71 +141,127 @@ export const Backend_skill = [
     width: 70,
     height: 70,
   },
-  
-];
-
-export const Full_stack = [
-  
-  
   {
     skill_name: "Docker",
     Image: "/docker.webp",
     width: 70,
     height: 70,
   },
-
-];
-
-
-
- export const Other_skill = [
-  {
-    skills_name:"jhontheripper",
-    Image:"/jhon.png",
-    width:70,
-    heigth:70,
-  },
-  {
-    skills_name:"nmap",
-    Image:"/nmap.png",
-    width:70,
-    heigth:70,
-  },
-  {
-    skills_name:"ctfchallenge",
-    Image:"ctf.png",
-    width:70,
-    heigth:70,
-  },
-  {
-    skills_name:"hydra ",
-    Image:"hydra.png",
-    width:70,
-    heigth:70,
-  },
-  {
-    skills_name:"burpsuite",
-    Image:"burpsuite.png",
-    width:70,
-    heigth:70,
-  },
   
 ];
 
-//sosoial media acount and links 
-export const Socials = [
+export const Full_stack = [
   {
-    name: "Linkedin",
-    src: "https://www.svgrepo.com/show/75820/linkedin.svg",
+    skills_name:"linux",
+      Image:"/png/linux.png",
+      width:60,
+      height:60,
   },
   {
-    name: "Github",
-    src: "https://www.svgrepo.com/show/387672/github.svg",
+    skills_name:"kalilinux",
+      Image:"/png/kali.png",
+      width:60,
+      height:60,
   },
   {
-    name: "Discord",
-    src: "/discord.svg",
+    skills_name:"archlinux",
+      Image:"/png/arch.png",
+      width:60,
+      height:60,
   },
+  {
+    skills_name:"windows",
+      Image:"/png/windows.png",
+      width:60,
+      height:60,
+  },
+  {
+    skills_name:"github",
+      Image:"/png/github.png",
+      width:60,
+      height:60,
+  },
+  
+  
+
 ];
 
 
+export const  os_used = [
+  {
+    skills_name:"jhontheripper",
+    Image:"/png/jhon.png",
+    width:55,
+    height:55,
+  },
+  {
+    skills_name:"nmap",
+    Image:"/png/nmap.png",
+    width:55,
+    height:55,
+  },
+  {
+    skills_name:"ctfchallenge",
+    Image:"/png/ctf.png",
+    width:55,
+    height:55,
+  },
+  {
+    skills_name:"hydra ",
+    Image:"/png/hydra.png",
+    width:55,
+    height:55,
+  },
+
+];  
+  export const Other_skill = [
+    
+    {
+      skills_name:"sqlmap",
+      Image:"/png/sqlmap.png",
+      width:90,
+      height:90,
+    },
+    {
+      skills_name:"burpsuite",
+      Image:"/png/burpsuite.png",
+      width:50,
+      height:50,
+    },
+     
+    
+    {
+      skills_name:"tor",
+      Image:"/png/tor.png",
+      width:50,
+      height:50,
+    },
+    
+  ];
+  export const ida =[
+
+    {
+      skills_name:"ida",
+      Image:"/png/ida.png",
+      width:55,
+      height:40,
+    },
+  ];
+  
+  
+  
+  export const Socials = [
+    {
+      name: "Linkedin",
+      src: "https://www.svgrepo.com/show/75820/linkedin.svg",
+    },
+    {
+      name: "Github",
+      src: "https://www.svgrepo.com/show/387672/github.svg",
+    },
+    {
+      name: "Discord",
+      src: "/discord.svg",
+    },
+  ];
+  

@@ -8,11 +8,11 @@ import Image from 'next/image';
 interface Props {
     src: string;
     width: number;
-    heigth: number;
+    height: number;
     index: number;
 }
 
-const SkillDataProvider = ({ src, width, heigth, index} : Props) => {
+const SkillDataProvider = ({ src, width, height, index} : Props) => {
     const {ref, inView} = useInView({
         triggerOnce: true
     })
@@ -35,7 +35,7 @@ const SkillDataProvider = ({ src, width, heigth, index} : Props) => {
     <Image
 src={src}
 width={width}
-heigth={heigth}
+height={height}
 alt='skill image'
     />
   </motion.div>

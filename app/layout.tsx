@@ -4,7 +4,6 @@ import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import StarBackground from "@/components/main/StarBackground";
-import SkillDataProvider from "@/components/sub/SkillsDataProvider";
 
 // Define fonts using correct API
 const inter = Inter({
@@ -35,7 +34,6 @@ export default function RootLayout({
         className={`${inter.variable} bg-[#030014] overflow-x-hidden`}>
          {/* <StarBackground />  */}
         <Navbar />
-       
         {children}
       </body>
     </html>

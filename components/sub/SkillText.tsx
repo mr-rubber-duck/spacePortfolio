@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
-
 const SkillText = () => {
   return (
     <div className="w-full h-auto flex flex-col items-center justify-center">
@@ -23,7 +22,6 @@ const SkillText = () => {
           Crafting solutions that redefine the future
         </h1>
       </motion.div>
-
       {/* Section Title */}
       <motion.div
         variants={slideInFromLeft(0.6)}
@@ -32,7 +30,6 @@ const SkillText = () => {
       >
         Building innovative apps with cutting-edge technologies
       </motion.div>
-
       {/* Subtext */}
       <motion.div
         variants={slideInFromRight(0.6)}
@@ -44,5 +41,4 @@ const SkillText = () => {
     </div>
   );
 };
-
 export default SkillText;
