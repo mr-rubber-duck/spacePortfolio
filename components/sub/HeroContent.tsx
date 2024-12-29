@@ -8,12 +8,15 @@ import {
   slideInFromTop,
 } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
-import StarsCanvas from "../main/StarBackground";
+
 import CombinedTextEffect from "../main/CombinedTextEffect";
+
 
 const HeroContent = () => {
   return (
+    
     <CombinedTextEffect  />
+    
      
     
     

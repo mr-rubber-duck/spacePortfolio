@@ -241,8 +241,8 @@ export const  os_used = [
   export const ida =[
 
     {
-      skills_name:"ida",
-      Image:"/png/ida.png",
+      skills_name:"ghidra",
+      Image:"/png/ghidra.png",
       width:55,
       height:40,
     },
@@ -252,8 +252,11 @@ export const  os_used = [
   
   export const Socials = [
     {
+    
+     
       name: "Linkedin",
       src: "https://www.svgrepo.com/show/75820/linkedin.svg",
+    
     },
     {
       name: "Github",

@@ -1,28 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Roboto_Mono } from "next/font/google"; // Correct font names
+import { Inter } from "next/font/google";
 import "./globals.css";
-import StarsCanvas from "@/components/main/StarBackground";
+
 import Navbar from "@/components/main/Navbar";
-import StarBackground from "@/components/main/StarBackground";
+import BlackHoleEffect from "@/components/main/BlackHoleEffect";
 
-// Define fonts using correct API
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
-  subsets: ["latin"],
-});
-
-// Metadata for your page
 export const metadata: Metadata = {
-  title: "Portfolio Taha Amine",
+  title: "Lassami Taha Amine eddine Portfolio",
   description: "This is my portfolio",
 };
 
-// Root Layout Component
 export default function RootLayout({
   children,
 }: {
@@ -31,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} bg-[#030014] overflow-x-hidden`}>
-         {/* <StarBackground />  */}
+        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden relative`}
+      >
+        {/* Black Hole Effect placed before Navbar */}
+        <BlackHoleEffect />
         <Navbar />
         {children}
       </body>

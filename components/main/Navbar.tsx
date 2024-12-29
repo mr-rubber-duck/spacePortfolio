@@ -11,7 +11,7 @@ const Navbar = () => {
           className="h-auto w-auto flex flex-row items-center"
         >
           <Image
-            src="logome.svg"
+            src="/home.png"
             alt="logo"
             width={50}
             height={50}
@@ -38,14 +38,21 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-row gap-5">
+        {/* <a  href="https://www.instagram.com/"
+        target="_blank"
+       
+        > */}
           {Socials.map((social) => (
+            
             <Image
               src={social.src}
               alt={social.name}
               key={social.name}
               width={24}
               height={24}
+             
             />
+            // </a>
           ))}
         </div>
       </div>
