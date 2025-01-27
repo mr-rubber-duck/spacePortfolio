@@ -37,23 +37,22 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5">
-        {/* <a  href="https://www.instagram.com/"
-        target="_blank"
-       
-        > */}
-          {Socials.map((social) => (
-            
-            <Image
-              src={social.src}
-              alt={social.name}
-              key={social.name}
-              width={24}
-              height={24}
-             
-            />
-            // </a>
-          ))}
+        <div className=" animate-pulse flex flex-row gap-5 ">
+      {Socials.map((social) => (
+        <a 
+          key={social.name} 
+          href={social.href} 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={social.src}
+            alt={social.name}
+            width={30}
+            height={30}
+          />
+        </a>
+      ))}
         </div>
       </div>
     </div>

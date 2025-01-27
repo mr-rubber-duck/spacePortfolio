@@ -66,7 +66,7 @@ const CombinedTextEffect: React.FC = () => {
         {/* Paragraph */}
         <motion.p
           variants={itemVariants}
-          className="text-lg text-purple-250 my-5 max-w-[600px]"
+          className="text-lg font-serif  text-purple-300 my-5 max-w-[600px]"
         >
           I&apos;m a Cybersecurity Specialist and Software Developer with a proven track record in Bug Bounty Hunting and Penetration Testing. 
           I am constantly learning new skills, tackling complex security challenges,
@@ -89,7 +89,7 @@ const CombinedTextEffect: React.FC = () => {
         className="w-full h-full flex justify-center items-center"
       >
         <Image
-          src="/mainIconsdark.svg"
+          src="/png/maine.svg"
           alt="work icons"
           height={650}
           width={650}

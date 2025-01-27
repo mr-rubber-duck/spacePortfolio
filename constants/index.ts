@@ -255,15 +255,18 @@ export const  os_used = [
     
      
       name: "Linkedin",
+      href:"https://www.linkedin.com/in/taha-amine-lassami-178535302/",
       src: "https://www.svgrepo.com/show/75820/linkedin.svg",
     
     },
     {
       name: "Github",
+      href:'https://github.com/mr-rubber-duck',
       src: "https://www.svgrepo.com/show/387672/github.svg",
     },
     {
       name: "Discord",
+      href:"https://discord.com/",
       src: "/discord.svg",
     },
   ];
