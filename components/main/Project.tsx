@@ -26,6 +26,7 @@ const Projects = () => {
       <li>-Vulnerability Assessment and Penetration Testing (VAPT) Techniques.</li>
       <li>-Data Analytics Platforms.</li>
       <li>-Neural Network(for AI model).</li>
+      
     </ul>
     <br />
     <strong>-Key Focus Areas:</strong>
@@ -33,6 +34,7 @@ const Projects = () => {
       <li>-Advanced threat detection and prevention.</li>
       <li>-Real-time monitoring and response systems.</li>
       <li>-AI-driven vulnerability assessment.</li>
+      <li>-Neural Network(for AI model).</li>
     </ul>
   `}
 />
@@ -46,8 +48,8 @@ const Projects = () => {
               <ul>
               <li> -Python and c/c++: For developing scripts and  tools with a focus on cybersecurity.</li>
              <li> -Network Libraries (e.g., Scapy, Socket): To enhance network security capabilities.</li>
-              <li>-Open-source Security Tools (Nmap, Burp Suite): Improving and customizing tools to better serve cybersecurity professionals.</li>
-              <li>-Blue Team Tools: Focus on strengthening defense mechanisms for incident response and threat detection.</li>
+              <li>-Open-source Security Tools(Nmap, Burp Suite): Improving and customizing tools to better serve cybersecurity professionals.</li>
+               <li>-Using IA to generate  more clean and safe code.</li><br /><br /><br /><br />
               </ul>
             `}
           />
@@ -66,7 +68,7 @@ const Projects = () => {
            <li>-Tailwind CSS: For utility-first styling and responsive design.</li>
             <li>-React: For dynamic and interactive user interfaces.</li>
             <li>-Framer Motion: For smooth and interactive animations to enhance the user experience.</li>
-            <li>-TypeScript: For type safety and better developer experience.</li>
+            <li>-TypeScript: For type safety and better developer experience.</li><br /><br />
             </ul>
             
           `}/>
@@ -161,13 +163,18 @@ const Projects = () => {
 
                           <ProjectCard
                             src="/png/iaincyber.jpg"
-                            title="'Integrating Artificial Intelligence for Advanced Cybersecurity Solutions'"
-                            description="I am deeply engaged in researching and learning from a variety of sources, including blogs, articles, and academic studies, to explore the integration of artificial intelligence into cybersecurity. My focus is on understanding how AI can be leveraged to create more advanced techniques for detecting and preventing cyber threats. By combining cutting-edge machine learning algorithms with cybersecurity strategies, I aim to develop intelligent systems capable of real-time threat analysis, automated vulnerability assessments, and adaptive defenses. This research is driven by my commitment to advancing the field of cybersecurity and addressing emerging challenges in an increasingly connected world."  
+                            title="Integrating Artificial Intelligence for Advanced Cybersecurity Solutions."
+                         
+                            description="I am deeply engaged in researching and learning from a variety of sources, including blogs, articles, and academic studies, to explore the integration of artificial intelligence into cybersecurity. My focus is on understanding how AI can be leveraged to create more advanced techniques for detecting and preventing cyber threats. By combining cutting-edge machine learning algorithms with cybersecurity strategies, I aim to develop intelligent systems capable of real-time threat analysis, automated vulnerability assessments, and adaptive defenses. This research is driven by my commitment to advancing the field of cybersecurity and addressing emerging challenges in an increasingly connected world. 
+                            <br /><br /> <br /><br />"
                           />
                           <ProjectCard
                             src="/png/tsmc.jpg"
-                            title="Inspired by Nanotechnology and the Chip Revolution"
-                            description="I have a deep fascination with the nanotechnology and chip industry, especially the groundbreaking innovations led by companies like TSMC and ASML. The intricate precision of semiconductor manufacturing and the cutting-edge advancements in lithography technology inspire me to delve deeper into this field. My interest in 'chips warfare' stems from the pivotal role these technologies play in shaping the future of computing, powering modern innovations, and driving global competition."
+                            title="Nanotechnology and the Chip Revolution."
+                            description="I have a deep fascination with nanotechnology and the semiconductor industry, particularly the groundbreaking innovations pioneered by companies like TSMC and ASML. The precision of semiconductor manufacturing and the cutting-edge advancements in lithography technology drive my passion for this field. From extreme ultraviolet (EUV) lithography to advanced chip architectures, every breakthrough inspires me to delve deeper into this transformative domain.
+
+My interest in the strategic landscape of the chip wars stems from the pivotal role these technologies play in shaping the future of computing, powering next-generation innovations, and influencing global competition. As semiconductors become the backbone of artificial intelligence, quantum computing.<br /><br /><br /><br />"
+                          
                           />
 
                             </div>

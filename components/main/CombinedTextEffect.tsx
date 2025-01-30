@@ -15,12 +15,14 @@ const containerVariants = {
 
 const CombinedTextEffect = () => {
   const [showFirst, setShowFirst] = useState(true);
+  const [showEffect, setShowEffect] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setShowFirst(prev => !prev);
+      setShowEffect(false); // Reset effect state
+      setTimeout(() => setShowEffect(true), 600); // Delay effect to start after transition
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -35,7 +37,7 @@ const CombinedTextEffect = () => {
         {/* Welcome Box */}
         <motion.div
           variants={itemVariants}
-          className="Welcome-box py-[20px] px-[20px] border border-[#7042f88b] bg-opacity-50 "
+          className="Welcome-box py-[20px] px-[20px] border border-[#7042f88b] bg-opacity-50"
         >
           <FaStar className="text-[#00010d] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[20px] font-mono text-white">
@@ -48,9 +50,13 @@ const CombinedTextEffect = () => {
           variants={itemVariants}
           className="flex flex-col gap-2 mt-6 text-5xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-red-600">
-            Your Partner in {""}
-          </span>
+          <motion.span 
+            initial={{ opacity: 0 }} 
+            animate={showEffect ? { opacity: 1, transition: { duration: 0.6 } } : {}} 
+            className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-red-600"
+          >
+            Your Partner in {" "}
+          </motion.span>
           <div className="relative h-[100px]"> {/* Fixed height container */}
             <AnimatePresence mode='wait'>
               {showFirst ? (
@@ -62,7 +68,7 @@ const CombinedTextEffect = () => {
                   transition={{ duration: 0.6 }}
                   className="absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
                 >
-                  Cyber security {" "}
+                  Cyber Security {" "}
                 </motion.span>
               ) : (
                 <motion.span
@@ -83,14 +89,14 @@ const CombinedTextEffect = () => {
         {/* Paragraph */}
         <motion.p
           variants={itemVariants}
-          className="text-lg font-serif text-purple-300 my-5 max-w-[600px] bg-opacity-50  p-4 rounded  font-family: 'Amiri', serif;"
+          className="text-lg font-serif text-purple-300 my-5 max-w-[600px] bg-opacity-50 p-4 rounded font-family: 'Amiri', serif;"
         >
           I&apos;m a Cybersecurity Specialist and Software Developer with a proven track record in Bug Bounty Hunting and Penetration Testing. 
           I am constantly learning new skills, tackling complex security challenges,
           and searching for innovative solutions in cybersecurity by leveraging AI technologies. 
           Explore how my expertise and continuous learning can add value to your projects and business.
         </motion.p>
-            
+
         {/* Button */}
         <motion.a
           variants={itemVariants}
