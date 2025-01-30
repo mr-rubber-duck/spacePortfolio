@@ -1,48 +1,44 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SparklesIcon } from '@heroicons/react/24/solid';
-import Image from "next/image";
-import BlackHoleEffect from './BlackHoleEffect';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaStar } from 'react-icons/fa'; // Importing an icon from react-icons
+import Image from 'next/image'; // Assuming you are using next/image
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3, // Delay between children animations
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8, // Smooth animation duration
-      ease: "easeOut",
-    },
-  },
-};
+const CombinedTextEffect = () => {
+  const [showFirst, setShowFirst] = useState(true);
 
-const CombinedTextEffect: React.FC = () => {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowFirst(prev => !prev);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    
     <motion.div
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] galaxy-bg"
     >
-      <div className=" h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         {/* Welcome Box */}
         <motion.div
           variants={itemVariants}
-          className=" Welcome-box py-[20px] px-[20px] border border-[#7042f88b] opacity-[0.9]"
+          className="Welcome-box py-[20px] px-[20px] border border-[#7042f88b] bg-opacity-50 "
         >
-          <SparklesIcon className="text-[#00010d] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-[20px]  font-mono  ">
+          <FaStar className="text-[#00010d] mr-[10px] h-5 w-5" />
+          <h1 className="Welcome-text text-[20px] font-mono text-white">
             Welcome to my Portfolio
           </h1>
         </motion.div>
@@ -53,20 +49,41 @@ const CombinedTextEffect: React.FC = () => {
           className="flex flex-col gap-2 mt-6 text-5xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-red-600">
-            Your Partner {""}
+            Your Partner in {""}
           </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-            in Secure and Efficient {" "}
-          </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-pink-500">
-            Software Development 
-          </span>
+          <div className="relative h-[100px]"> {/* Fixed height container */}
+            <AnimatePresence mode='wait'>
+              {showFirst ? (
+                <motion.span
+                  key="cyber-security"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.6 }}
+                  className="absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
+                >
+                  Cyber security {" "}
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="software-development"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.6 }}
+                  className="absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
+                >
+                  Software Development 
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </div>
         </motion.div>
-       
+
         {/* Paragraph */}
         <motion.p
           variants={itemVariants}
-          className="text-lg font-serif  text-purple-300 my-5 max-w-[600px]"
+          className="text-lg font-serif text-purple-300 my-5 max-w-[600px] bg-opacity-50  p-4 rounded  font-family: 'Amiri', serif;"
         >
           I&apos;m a Cybersecurity Specialist and Software Developer with a proven track record in Bug Bounty Hunting and Penetration Testing. 
           I am constantly learning new skills, tackling complex security challenges,
@@ -77,7 +94,7 @@ const CombinedTextEffect: React.FC = () => {
         {/* Button */}
         <motion.a
           variants={itemVariants}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] bg-opacity-50 bg-gray-800"
         >
           Learn More!
         </motion.a>
@@ -96,7 +113,6 @@ const CombinedTextEffect: React.FC = () => {
         />
       </motion.div>
     </motion.div>
-     
   );
 };
 
