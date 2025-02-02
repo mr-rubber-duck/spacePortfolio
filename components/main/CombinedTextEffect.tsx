@@ -91,19 +91,24 @@ const CombinedTextEffect = () => {
           variants={itemVariants}
           className="text-lg font-serif text-purple-300 my-5 max-w-[600px] bg-opacity-50 p-4 rounded font-family: 'Amiri', serif;"
         >
-          I&apos;m a Cybersecurity Specialist and Software Developer with a proven track record in Bug Bounty Hunting and Penetration Testing. 
-          I am constantly learning new skills, tackling complex security challenges,
-          and searching for innovative solutions in cybersecurity by leveraging AI technologies. 
-          Explore how my expertise and continuous learning can add value to your projects and business.
+          
+              As a Cybersecurity Specialist and Software Developer,
+              I specialize in Bug Bounty Hunting and Penetration Testing, 
+              leveraging AI-driven security solutions. 
+              Passionate about tackling complex security challenges, 
+              I continuously refine my expertise to protect and enhance digital ecosystems. 
+              Let’s explore how my skills can elevate your projects and business security.
+
+
         </motion.p>
 
         {/* Button */}
-        <motion.a
+        {/* <motion.a
           variants={itemVariants}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] bg-opacity-50 bg-gray-800"
         >
           Learn More!
-        </motion.a>
+        </motion.a> */}
       </div>
 
       {/* Image */}
