@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 const BlackHoleEffect = () => {
-  const mountRef = useRef(null);
+  const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Scene, Camera, Renderer
@@ -18,7 +18,9 @@ const BlackHoleEffect = () => {
     );
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current.appendChild(renderer.domElement);
+    if (mountRef.current) {
+      mountRef.current.appendChild(renderer.domElement);
+    }
 
     // Create Stars
     const starGeometry = new THREE.BufferGeometry();
@@ -28,7 +30,7 @@ const BlackHoleEffect = () => {
     });
 
     const starVertices = [];
-    const starSpeeds = [];
+    const starSpeeds: number[] = [];
     for (let i = 0; i < 10000; i++) {
       const x = (Math.random() - 0.5) * 2000;
       const y = (Math.random() - 0.5) * 2000;
@@ -88,14 +90,15 @@ const BlackHoleEffect = () => {
     // Cleanup on Unmount
     return () => {
       renderer.dispose();
-      mountRef.current.removeChild(renderer.domElement);
+      if (mountRef.current) {
+        mountRef.current.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
   return (
     <div
       ref={mountRef}
-      className="absolute top-0 left-0 w-full h-full z-0"
       style={{
         position: "fixed", // Ensure the background is fixed and covers entire viewport
         top: 0,

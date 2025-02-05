@@ -12,11 +12,11 @@ import {
 import React, { useEffect, useRef } from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
-import Encryption from "./Encryption";
+
 
 const Skills = () => {
-    const firstVideoRef = useRef(null);
-    const secondVideoRef = useRef(null);
+    const firstVideoRef = useRef<HTMLVideoElement>(null);
+    const secondVideoRef = useRef<HTMLVideoElement>(null);
   
     useEffect(() => {
       const firstVideo = firstVideoRef.current;
@@ -151,7 +151,7 @@ const Skills = () => {
                 muted
                 autoPlay
                 onLoadedMetadata={(e) => {
-                  console.log("First video duration:", e.target.duration);
+                  console.log("First video duration:", (e.target as HTMLVideoElement).duration);
                 }}
                 src="/cards-video.webm"
               />
@@ -164,7 +164,7 @@ const Skills = () => {
                 loop
                 muted
                 onLoadedMetadata={(e) => {
-                  console.log("Second video duration:", e.target.duration);
+                  console.log("Second video duration:", (e.target as HTMLVideoElement).duration);
                 }}
                 src="/cards-video.webm"
               />
