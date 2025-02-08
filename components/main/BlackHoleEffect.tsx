@@ -3,10 +3,14 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-const BlackHoleEffect = () => {
+const BlackHoleEffect: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     // Scene, Camera, Renderer
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x030014); // Dark background for galaxy stars
@@ -36,49 +40,19 @@ const BlackHoleEffect = () => {
       const y = (Math.random() - 0.5) * 2000;
       const z = (Math.random() - 0.5) * 2000;
       starVertices.push(x, y, z);
-      
-      // Random speed for each star
-      const speed = Math.random() * 0.1 + 0.05; // Speed between 0.05 and 0.15
-      starSpeeds.push(speed);
+      starSpeeds.push(Math.random() * 0.02 + 0.01);
     }
-
     starGeometry.setAttribute(
-      "position",
+      'position',
       new THREE.Float32BufferAttribute(starVertices, 3)
     );
 
     const stars = new THREE.Points(starGeometry, starMaterial);
     scene.add(stars);
 
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0x404040, 2);
-    scene.add(ambientLight);
-
-    // Camera Position
-    camera.position.z = 150;
-
-    // Animation Loop
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Move and Rotate Stars for a Galaxy effect
-      const positions = starGeometry.attributes.position.array;
-      for (let i = 0; i < positions.length; i += 3) {
-        // Adjust the speed of each star
-        const speed = starSpeeds[i / 3]; // Speed corresponding to the star
-
-        positions[i] += speed; // Move X
-        positions[i + 1] += speed; // Move Y
-        positions[i + 2] += speed; // Move Z
-
-        // Reset stars when they move out of bounds to create a loop effect
-        if (positions[i] > 1000) positions[i] = -1000;
-        if (positions[i + 1] > 1000) positions[i + 1] = -1000;
-        if (positions[i + 2] > 1000) positions[i + 2] = -1000;
-      }
-      starGeometry.attributes.position.needsUpdate = true;
-
-      // Rotate Stars for dynamic effect
       stars.rotation.x += 0.0005;
       stars.rotation.y += 0.0005;
 
@@ -87,9 +61,8 @@ const BlackHoleEffect = () => {
 
     animate();
 
-    // Cleanup on Unmount
+    // Cleanup on unmount
     return () => {
-      renderer.dispose();
       if (mountRef.current) {
         mountRef.current.removeChild(renderer.domElement);
       }

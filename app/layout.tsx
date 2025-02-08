@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Lassami Taha Amine eddine Portfolio",
+  
   description: "This is my portfolio",
 };
 
@@ -22,8 +23,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden relative`}
       >
-        {/* Black Hole Effect placed before Navbar */}
-        <BlackHoleEffect />
+         <BlackHoleEffect />
         <Navbar />
         {children}
       </body>
